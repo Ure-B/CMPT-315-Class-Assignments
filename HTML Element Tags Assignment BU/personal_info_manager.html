@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: lightgray; font-family: Arial, Helvetica, sans-serif;">
+<html lang="en" style=" scroll-padding-top: 200px; background-color: lightgray; font-family: Arial, Helvetica, sans-serif;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Info Manager</title>
 </head>
-<body style="margin: 0px; padding: 0px; padding-left: 10px;">
-    <header style="position: fixed; background-color: lightgray; width: 100vw;">
+<body style="margin: 0px; padding: 0px;">
+    <header style="position: fixed; background-color: lightgray; width: 100vw; box-shadow: 0px 1px 10px; padding: 10px;">
         <h1><span style="background-color: teal; border-radius: 10px; padding: 10px; color: whitesmoke;">Personal Info Manager</span></h1>
         <div>
             <nav>
-                <a href="#form">Information Form</a>
-                <a href="#data">Data Table</a>
+                <a href="#form" style="color: whitesmoke; text-decoration: none; background-color: teal; border-radius: 5px; padding: 5px;">Information Form</a>
+                <a href="#data" style="color: whitesmoke; text-decoration: none; background-color: teal; border-radius: 5px; padding: 5px;">Data Table</a>
             </nav>
         </div>
         <p style="color: teal; font-size: 20px;">This page is for managing your personal info.</p>
     </header>
-    <main style="padding-top: 130px;">
+    <main style="padding: 10px; padding-top: 200px;">
         <section id="form">
+            <h2 style="color: teal;">Please enter your information and click submit</h2>
             <form onsubmit="return handleSubmit(event)">
                 <div style="margin-bottom: 20px;">
-                    <label for="catagory">Catagory</label>
+                    <label style="color: teal;" for="catagory">Catagory</label>
                     <select name="Catagory" id="catagory">
                         <option value="">
                             Work
@@ -34,11 +35,11 @@
                     </select>
                 </div>
                 <div style="margin-bottom: 20px;">
-                    <label for="desc">Information Description</label>
+                    <label style="color: teal;" for="desc">Information Description</label>
                     <input id="desc" type="text" placeholder="Enter...">
                 </div>
                 <div style="margin-bottom: 20px;">
-                    <label for="date">Date</label>
+                    <label style="color: teal;" for="date">Expiry Date</label>
                     <input id="date" type="date">
                 </div>                
                 <button type="submit" style="background-color: rgb(0, 197, 197); border-radius: 20px; border-color: teal; color: rgb(0, 53, 53);">Submit</button>
@@ -51,39 +52,40 @@
             </script>
         </section>
         <section id="data" style="margin-top: 30px;">
+            <h2 style="color: teal;">Information Table</h2>
             <table style="border: 1px solid black; border-collapse: collapse; background-color: whitesmoke;">
                 <thead>
                     <tr>
-                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Catagory</th>
-                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Information Description</th>
-                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Expiry Date</th>
-                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Actions</th>
+                        <th style="border: 1px solid black; color: whitesmoke; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Catagory</th>
+                        <th style="border: 1px solid black; color: whitesmoke; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Information Description</th>
+                        <th style="border: 1px solid black; color: whitesmoke; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Expiry Date</th>
+                        <th style="border: 1px solid black; color: whitesmoke; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Work</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Computer password</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2025-02-03</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">Work</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">Computer password</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">2025-02-03</td>
                         <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
                     </tr>
                     <tr>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Health</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Health number</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2025-05-16</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">Health</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">Health number</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">2025-05-16</td>
                         <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
                     </tr>
                     <tr>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Personal</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">SIN</td>
-                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2027-11-08</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">Personal</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">SIN</td>
+                        <td style="border: 1px solid black; color: teal; padding: 10px; text-align: center;">2027-11-08</td>
                         <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-    <footer>
+    <footer style="margin-top: 300px; padding-left: 10px;">
         <p style="font-weight: bold;">Contact: <a href="mailto:ureb@mymacewan.ca" style="color: teal; text-decoration: none;">ureb@mymacewan.ca</a> © 2025 Brendan Ure. All rights reserved</p>
     </footer>
 </body>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: lightgray; font-family: Arial, Helvetica, sans-serif;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info Manager</title>
+</head>
+<body style="margin: 0px; padding: 0px; padding-left: 10px;">
+    <header style="position: fixed; background-color: lightgray; width: 100vw;">
+        <h1><span style="background-color: teal; border-radius: 10px; padding: 10px; color: whitesmoke;">Personal Info Manager</span></h1>
+        <div>
+            <nav>
+                <a href="#form">Information Form</a>
+                <a href="#data">Data Table</a>
+            </nav>
+        </div>
+        <p style="color: teal; font-size: 20px;">This page is for managing your personal info.</p>
+    </header>
+    <main style="padding-top: 130px;">
+        <section id="form">
+            <form onsubmit="return handleSubmit(event)">
+                <div style="margin-bottom: 20px;">
+                    <label for="catagory">Catagory</label>
+                    <select name="Catagory" id="catagory">
+                        <option value="">
+                            Work
+                        </option>
+                        <option value="">
+                            Personal
+                        </option>
+                        <option value="">
+                            Health
+                        </option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="desc">Information Description</label>
+                    <input id="desc" type="text" placeholder="Enter...">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="date">Date</label>
+                    <input id="date" type="date">
+                </div>                
+                <button type="submit" style="background-color: rgb(0, 197, 197); border-radius: 20px; border-color: teal; color: rgb(0, 53, 53);">Submit</button>
+            </form>
+            <script>
+                function handleSubmit(event) {
+                  alert("Information has been added, but will not show up in the table below!");
+                  return true;
+                }
+            </script>
+        </section>
+        <section id="data" style="margin-top: 30px;">
+            <table style="border: 1px solid black; border-collapse: collapse; background-color: whitesmoke;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Catagory</th>
+                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Information Description</th>
+                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Expiry Date</th>
+                        <th style="border: 1px solid black; padding: 10px; min-width: 150px; background-color: rgba(0, 128, 128, 0.575);">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Work</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Computer password</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2025-02-03</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Health</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Health number</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2025-05-16</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">Personal</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">SIN</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center;">2027-11-08</td>
+                        <td style="border: 1px solid black; padding: 10px; text-align: center; background-color: rgba(255, 0, 0, 0.719); color: whitesmoke;"> Delete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p style="font-weight: bold;">Contact: <a href="mailto:ureb@mymacewan.ca" style="color: teal; text-decoration: none;">ureb@mymacewan.ca</a> © 2025 Brendan Ure. All rights reserved</p>
+    </footer>
+</body>
+</html>

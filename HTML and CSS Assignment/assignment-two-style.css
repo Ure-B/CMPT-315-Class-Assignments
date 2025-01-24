@@ -1,0 +1,148 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    scroll-padding-top: 200px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: #212121;
+    position: fixed; 
+    width: 100vw; 
+    height: 140px;
+    box-shadow: 0px 1px 10px black; 
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #de0000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+a:hover {
+    color: #de0000;
+    background-color: #323232;
+}
+
+main {
+    padding: 10px; 
+    padding-top: 150px;
+    height: 150vh;
+    background-image: linear-gradient(#323232, #2a2a2a, #212121);
+}
+
+#register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.form-element {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+input {
+    background-color: #323232;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+label {
+    min-width: 100px;
+}
+
+#submit {
+    background-color: #de0000;
+    border-radius: 10px;
+    padding: 7px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border: none;
+}
+
+#submit:hover {
+    background-color: #323232;
+    color: #de0000;
+}
+
+#users {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+th {
+    border: 2px solid #1a1919;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 200px;
+    background-color: #212121;
+}
+
+td {
+    border: 2px solid #1a1919;
+    padding: 10px;
+}
+
+.odd {
+    background-color: #323232;
+}
+
+.even {
+    background-color: red;
+}
+
+footer {
+    background-color: #212121;
+    text-align: center;
+}
+
+#copyright {
+    margin: 0px; 
+    padding: 30px;
+}

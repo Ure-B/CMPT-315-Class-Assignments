@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment-two-style.css">
+    <title>User Registration System</title>
+</head>
+<body>
+    <header id="home">
+        <h1>User Registration System</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#register">Register</a>
+            <a href="#users">Users</a>
+        </nav>
+    </header>
+    <main>
+        <section id="register">
+            <h2>Register New User</h2>
+            <form action="">
+                <h3>Personal Information</h3>
+                <div class="form-element">
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text">
+                </div>
+                <div class="form-element">
+                    <label for="email">Email</label>
+                    <input id="email" type="email">
+                </div>
+                <div class="form-element">
+                    <label for="pass">Password</label>
+                    <input id="pass" type="password">
+                </div>
+                <h3>Address</h3>
+                <div class="form-element">
+                    <label for="street">Street Address</label>
+                    <input id="street" type="text">
+                </div>
+                <div class="form-element">
+                    <label for="province">Province</label>
+                    <input id="province" type="text">
+                </div>
+                <div class="form-element">
+                    <label for="city">City</label>
+                    <input id="city" type="text">
+                </div>
+                <div class="form-element">
+                    <label for="postal">Postal Code</label>
+                    <input id="postal" type="text">
+                </div>
+                <div class="form-element">
+                    <label for="gender">Gender</label>
+                    <select name="" id="gender">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Other</option>
+                    </select>
+                </div>
+                <h3>Hobbies</h3>
+                <div class="form-element">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="hobby" id="hob1">
+                            <label for="hob1">Coding</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="hobby" id="hob2">
+                            <label for="hob2">Gaming</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="hobby" id="hob3">
+                            <label for="hob3">Working Out</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+        <section id="users">
+            <h2>Registered Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Hobbies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Brendan Ure</td>
+                        <td>ureb@mymacewan.ca</td>
+                        <td>Male</td>
+                        <td>123 Street, Edmonton, AB, T8R2N1</td>
+                        <td>Coding, Gaming, Working Out</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Billy Bob</td>
+                        <td>bobb@mymacewan.ca</td>
+                        <td>Male</td>
+                        <td>456 street, Edmonton, AB, A7SN2P</td>
+                        <td>Coding</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Brendan Ure</td>
+                        <td>ureb@mymacewan.ca</td>
+                        <td>Male</td>
+                        <td>123 Street, Edmonton, AB, T8R2N1</td>
+                        <td>Coding, Gaming, Working Out</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Billy Bob</td>
+                        <td>bobb@mymacewan.ca</td>
+                        <td>Male</td>
+                        <td>456 street, Edmonton, AB, A7SN2P</td>
+                        <td>Coding</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Brendan Ure</td>
+                        <td>ureb@mymacewan.ca</td>
+                        <td>Male</td>
+                        <td>123 Street, Edmonton, AB, T8R2N1</td>
+                        <td>Coding, Gaming, Working Out</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p id="copyright">Copyright © Brendan Ure 2025</p>
+    </footer>
+</body>
+</html>

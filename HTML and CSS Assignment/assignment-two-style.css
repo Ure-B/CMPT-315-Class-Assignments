@@ -43,7 +43,7 @@ a:hover {
 main {
     padding: 10px; 
     padding-top: 150px;
-    height: 150vh;
+    height: 160vh;
     background-image: linear-gradient(#323232, #2a2a2a, #212121);
 }
 
@@ -55,7 +55,11 @@ main {
 }
 
 h2 {
-    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+h3 {
+    margin-top: 50px;
 }
 
 .form-element {
@@ -85,6 +89,12 @@ input {
 
 label {
     min-width: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #submit {

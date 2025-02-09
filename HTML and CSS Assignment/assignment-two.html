@@ -21,8 +21,12 @@
             <form action="">
                 <h3>Personal Information</h3>
                 <div class="form-element">
-                    <label for="name">Full Name</label>
-                    <input id="name" type="text">
+                    <label for="name">First Name</label>
+                    <input id="fname" type="text" required>
+                </div>
+                <div class="form-element">
+                    <label for="name">Last Name</label>
+                    <input id="lname" type="text" required>
                 </div>
                 <div class="form-element">
                     <label for="email">Email</label>
@@ -43,19 +47,19 @@
                 <h3>Address</h3>
                 <div class="form-element">
                     <label for="street">Street Address</label>
-                    <input id="street" type="text">
+                    <input id="street" type="text" required>
                 </div>
                 <div class="form-element">
                     <label for="province">Province</label>
-                    <input id="province" type="text">
+                    <input id="province" type="text" required>
                 </div>
                 <div class="form-element">
                     <label for="city">City</label>
-                    <input id="city" type="text">
+                    <input id="city" type="text" required>
                 </div>
                 <div class="form-element">
                     <label for="postal">Postal Code</label>
-                    <input id="postal" type="text">
+                    <input id="postal" type="text" required>
                 </div>
                 <h3>Hobbies</h3>
                 <div class="form-element">
@@ -135,4 +139,123 @@
         <p id="copyright">Copyright © Brendan Ure 2025</p>
     </footer>
 </body>
+<script>
+    class Profile {
+        constructor(fName, lName, stAddress, city, province, postal) {
+            this.fname = fName;
+            this.lname = lName;
+            this.address = {
+                "stAddress": stAddress,
+                "city": city,
+                "province": province,
+                "postal": postal
+            }
+        }
+
+        toString() {
+            return `${this.fname}, ${this.lname}, ${this.address.stAddress}, ${this.address.city}, ${this.address.province}, ${this.address.postal}`;
+        }
+
+        show() {
+            console.log(this.toString());
+
+            const fname = document.getElementById("fname");
+            fname.value = this.fname;
+
+            const lname = document.getElementById("lname");
+            lname.value = this.lname;
+
+            const street = document.getElementById("street");
+            street.value = this.address.stAddress;
+
+            const province = document.getElementById("province");
+            province.value = this.address.province;
+
+            const city = document.getElementById("city");
+            city.value = this.address.city;
+
+            const postal = document.getElementById("postal");
+            postal.value = this.address.postal;
+        }
+
+        remove() {
+            const fname = document.getElementById("fname");
+            fname.value = "";
+            this.fname = "";
+
+            const lname = document.getElementById("lname");
+            lname.value = "";
+            this.lname = "";
+
+            const street = document.getElementById("street");
+            street.value = "";
+            this.address.stAddress = "";
+
+            const province = document.getElementById("province");
+            province.value = "";
+            this.address.province = "";
+
+            const city = document.getElementById("city");
+            city.value = "";
+            this.address.city = "";
+
+            const postal = document.getElementById("postal");
+            postal.value = "";
+            this.address.postal = "";
+        }
+
+        update() {
+            const fname = document.getElementById("fname");
+            this.fname = fname.value;
+
+            const lname = document.getElementById("lname");
+            this.lname = lname.value;
+
+            const street = document.getElementById("street");
+            this.address.stAddress = street.value;
+
+            const province = document.getElementById("province");
+            this.address.province = province.value;
+
+            const city = document.getElementById("city");
+            this.address.city = city.value;
+
+            const postal = document.getElementById("postal");
+            this.address.postal = postal.value;
+        }
+    }
+
+    // Main JS Logic
+    p = new Profile("", "", "", "", "", "");
+
+    document.getElementById("fname").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("lname").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("street").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("province").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("city").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("postal").addEventListener("input", () => {
+        p.update();
+    });
+
+    document.getElementById("submit").addEventListener("click", () => {
+        event.preventDefault();
+        p.show();
+        p.remove();
+    });
+</script>
 </html>

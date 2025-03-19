@@ -8,6 +8,7 @@ html {
 body {
     padding: 0px;
     margin: 0px;
+    width: 100vw;
 }
 
 header {
@@ -28,11 +29,11 @@ h1 {
 a {
     text-decoration: none;
     color: #ffffff;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
     background-color: #de0000;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
 }
 
 a:hover {
@@ -43,7 +44,7 @@ a:hover {
 main {
     padding: 10px; 
     padding-top: 150px;
-    height: 1500px;
+    height: 1600px;
     background-image: linear-gradient(#323232, #2a2a2a, #212121);
 }
 
@@ -68,10 +69,11 @@ h3 {
 }
 
 input {
-    background-color: #323232;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #323232;
     width: 100%;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 .checkbox-group {
@@ -120,10 +122,11 @@ label {
 
 table {
     border-collapse: collapse;
-    width: 50%;
+    width: 30%;
     max-width: 600px;
     text-align: center;
     border: 1px solid #ffffff;
+    overflow-x: auto;
 }
 
 tr:hover {
@@ -134,7 +137,7 @@ th {
     border: 2px solid #1a1919;
     font-weight: bold;
     padding: 10px;
-    min-width: 200px;
+    min-width: 150px;
     background-color: #212121;
 }
 
@@ -154,6 +157,7 @@ td {
 footer {
     background-color: #212121;
     text-align: center;
+    width: 100vw;
 }
 
 #copyright {

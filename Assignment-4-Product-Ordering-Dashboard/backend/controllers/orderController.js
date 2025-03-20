@@ -7,7 +7,7 @@ const placeOrder = async (req, res) => {
     session.startTransaction();
 
     try {
-      const { productId, quantity, emailId, deliveryDate } = req.body;
+      const { productId, quantity, email, deliveryDate } = req.body;
   
       const product = await Product.findById(productId);
       if (!product) {
@@ -22,14 +22,14 @@ const placeOrder = async (req, res) => {
         return res.status(400).json({ error: "Insufficient stock available" });
       }
   
-      product.stock -= quantity;
-      await product.save();
-  
-      const order = new Order({ productId, quantity, emailId, deliveryDate });
+      const order = new Order({ productId, quantity, email, deliveryDate });
       await order.save();
 
       await session.commitTransaction();
       session.endSession();
+
+      product.stock -= quantity;
+      await product.save();
   
       res.status(201).json({ message: "Order placed successfully!", order });
     } catch (error) {
@@ -40,6 +40,9 @@ const placeOrder = async (req, res) => {
 };
 
 const getOrders = async (req, res) => {
+    const session = await mongoose.startSession();
+    session.startTransaction();
+
     try {
         const orders = await Order.find()
             .populate("productId", "name") 
@@ -53,8 +56,12 @@ const getOrders = async (req, res) => {
             email: order.email
         }));
 
+        await session.commitTransaction();
+        session.endSession();
         res.status(200).json({ orders: formattedOrders });
     } catch (error) {
+        await session.abortTransaction();
+        session.endSession();
         res.status(500).json({ error: error.message });
     }
 };

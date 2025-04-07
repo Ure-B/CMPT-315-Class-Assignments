@@ -26,7 +26,7 @@ const Orders = () => {
         method: "PUT",
       });
       if (response.ok) {
-        await fetchOrders(); // Refresh orders list
+        await fetchOrders(); 
       } else {
         console.log("Failed to cancel order.");
       }
@@ -39,7 +39,7 @@ const Orders = () => {
     const today = new Date();
     const delivery = new Date(deliveryDate);
     const diffDays = (delivery - today) / (1000 * 60 * 60 * 24);
-    return diffDays > 5; // Only allow cancellation if delivery date is more than 5 days away
+    return diffDays > 5; 
   };
 
   return (
